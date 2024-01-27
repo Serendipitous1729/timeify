@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "time-management-extension",
+    "version": "1.0.0",
+    "description": "Time management extension",
+    "icons": {
+      "128": "icon.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["tabs", "activeTab", "scripting", "storage"]
+}
