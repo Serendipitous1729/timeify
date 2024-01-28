@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    font-family: "Monsterrat", sans-serif;
+    background:  #2a2a2b ;
+    color: whitesmoke;
+    width: 95%;  
+}
+
+img {
+    position: relative;
+    left: 20px;
+}
+
+
+h1 {
+    position: relative;
+    left: 50px;
+    font-family:  "Montserrat", sans-serif;
+}
+
+.Inputsys {
+    height:120%;
+    width: 50%;
+    box-shadow:  -5px -5px 9px rgba(255,255,255,0.05),
+    5px 5px 9px rgba(0,0,0,0.5);
+    Border-radius: 5px;
+    background-color: #2a2a2b;
+    padding-left: 5%;
+    font-family:  "Montserrat", sans-serif;
+}
+
+.planned {
+    height:100%;
+    width: 90%;
+    box-shadow:  -5px -5px 9px rgba(255,255,255,0.05),
+    5px 5px 9px rgba(0,0,0,0.5);
+    Border-radius: 5px;
+    background-color: #1ce188;
+    color:black;
+    padding-left: 5%;
+    font-family:  "Montserrat", sans-serif;
+}
+
+.free {
+    height:100%;
+    width: 90%;
+    box-shadow:  -5px -5px 9px rgba(255,255,255,0.05),
+    5px 5px 9px rgba(0,0,0,0.5);
+    Border-radius: 5px;
+    background-color: #e11c67;
+    color:black;
+    padding-left: 5%;
+    font-family:  "Montserrat", sans-serif;
+}
+
+.tasks{
+    height:100%;
+    width: 90%;
+    box-shadow:  -5px -5px 9px rgba(255,255,255,0.05),
+    5px 5px 9px rgba(0,0,0,0.5);
+    Border-radius: 5px;
+    background-color: #1cc3e1;
+    color:black;
+    padding-left: 5%;
+    font-family:  "Montserrat", sans-serif;
+}

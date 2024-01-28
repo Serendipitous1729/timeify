@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="inputsys.css">
+    <meta charset="UTF-8">
+    <img src="logo.png" alt="logo" align="left" hieght="40" width="40">
+    <h1>MinuteManager</h1>
+</head>
+<body>
+
+<div class="Inputsys">  
+<br><br>
+
+    <div class="planned">
+     <br>   
+    <label for="pe_hrs">Enter planned event duration in hrs:</label>
+        <input type="number" id="pe_hrs" name="pe_hrs" max="4", min="0">
+        <label for="pe_mins">mins:</label>
+        <input type="number" id="pe_mins" name="pe_mins" max="59", min="0" step="15"><br><br>
+        <label for="pe_name">Enter Name:</label>
+        <input type="text" id="pe_name" name="pe_name"><br><br>
+        <label for="pe_date">Enter Date: </label>
+        <input type="date", id="pe_date" name="pe_date"> <br><br>    
+        <label for="pe_time">Enter time: </label>
+        <input type="time", id="pe_time" name="pe_time"> <br><br>
+        <button onclick="getplan()">Enter</button><br><br>
+    </div>
+    <br><br>
+
+    <div class="free">
+        <br>
+        <label for="hrs">Enter free time in hrs:</label>
+        <input type="number" id="hrs" name="hrs" max="4", min="0">
+        <label for="mins">mins:</label>
+        <input type="number" id="mins" name="mins" max="59", min="0" step="15"><br><br>
+        <button onclick="gettime()">Enter</button>
+        <br><br>
+    </div>
+    <br><br>
+
+    <div class="tasks" id="tasks">
+        <br>
+        <label for="time">Enter Time:</label>
+        <input type="number" id="time" name="time" max="100" min="1"><br><br>
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="deadline">Enter Deadline: </label>
+        <input type="date", id="deadline" name="deadline" min="Date()"> <br><br>  
+        <label for="Priority">Enter Priority: </label>
+        <input type="number", id="Priority" name="Priority" min="0" max="14">
+        <br><br>
+        <button onclick="ask()" > Submit</button>
+        <br><br>
+        </div>
+        <br>
+        <button onclick="scheduleTasks()">Finish</button>
+        <br><br>
+        <p id="list_display"></p>
+        <script src="inputsys.js">
+        </script>
+    
+    </div>
+    <br><br>
+</div> 
+</body>
+

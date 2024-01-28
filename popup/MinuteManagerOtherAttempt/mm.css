@@ -5,6 +5,7 @@ body {
     background:  #2a2a2b ;
     color: whitesmoke;
     width: 95%;  
+    min-width: 400px;
 }
 
 img {

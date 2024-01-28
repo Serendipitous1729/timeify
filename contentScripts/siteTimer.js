@@ -24,7 +24,6 @@ window.addEventListener("load", function(){
 
 
 chrome.runtime.onMessage.addListener(function(message, sender){
-    alert("hgvvbelwefvgbhjbe");
     if(message.header == "data" && sender.tab == undefined){
         timeData = message.timeData;
         myDomain = getDomain(message.tab.url);

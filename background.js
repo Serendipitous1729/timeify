@@ -108,6 +108,11 @@ chrome.runtime.onMessage.addListener(function(message, sender){
                 });
         });
     }
+    // if(message.header == "task-input"){
+    //     updateTimestamps().then(function(timeData){
+                
+    //     });
+    // }
 });
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
@@ -122,6 +127,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
     }
 });
 
+
 // Reset every day
 prevDay = (new Date()).getDate();
 setInterval(function(){
@@ -129,3 +135,4 @@ setInterval(function(){
         resetWebsiteTimeData();
     }
 }, 60*1000);
+

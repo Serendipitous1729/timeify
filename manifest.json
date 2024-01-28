@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "time-management-extension",
+    "name": "timeify",
     "version": "1.0.0",
-    "description": "Time management extension",
+    "description": "This project is designed to help manage time, prevent users from wasting away time and help them focus on achieving their greatest dreams!!",
     "icons": {
       "128": "icon.png"
     },
