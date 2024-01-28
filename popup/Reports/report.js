@@ -4,8 +4,8 @@ function createRow(name, time) {
     let c2 = document.createElement("td");
     c1.innerText = name;
     let s = Math.floor((time/1000) % 60);
-    let m = Math.floor((time/1000 * 60) % 60);
-    let h = Math.floor((time/1000 * 60 * 60) % 24);
+    let m = Math.floor((time/(1000 * 60)) % 60);
+    let h = Math.floor((time/(1000 * 60 * 60)) % 24);
     c2.innerText = `${h}h ${m}m ${s}s`;
     row.appendChild(c1);
     row.appendChild(c2);
