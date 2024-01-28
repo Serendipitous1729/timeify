@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    font-family: "Monsterrat", sans-serif;
+    background:  #2a2a2b ;
+    color: whitesmoke;
+    width: 400px;
+    height: 400px;
+}
+
+img {
+    position: relative;
+    left: 20px;
+}
+
+
+h1 {
+    position: relative;
+    left: 50px;
+    font-family:  "Monsterrat", sans-serif;;
+}
+
+/* CSS Button 1 */
+.btn1 {
+    align-items: center;
+    background-color:  #e83b1d;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: #855f40 0 2px 4px,#855f40 0 7px 3px -3px,#391a01 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+
+.btn1:focus {
+    box-shadow:  #391a01 0 0 0 1.5px inset, #855f40 0 2px 4px, #855f40 0 7px 13px -3px,#522500 0 -3px 0 inset;
+  }
+  
+.btn1:hover {
+    box-shadow: #855f40 0 4px 8px, #855f40 0 7px 6px -3px, #391a01 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+.btn1:active {
+    box-shadow: #391a01 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+
+
+
+
+
+
+
+/* CSS Button 2 */
+.btn2 {
+    align-items: center;
+    background-color:  #1d9ae8;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: #405b85 0 2px 4px,#405b85 0 7px 3px -3px,#033269 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+
+.btn2:focus {
+    box-shadow:  #033269 0 0 0 1.5px inset, #405b85 0 2px 4px, #405b85 0 7px 13px -3px,#405b85 0 -3px 0 inset;
+  }
+  
+.btn2:hover {
+    box-shadow: #405b85 0 4px 8px, #405b85 0 7px 6px -3px, #033269 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+.btn2:active {
+    box-shadow: #033269 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+
+
+
+
+
+/* CSS Button 3 */
+.btn3 {
+    align-items: center;
+    background-color:  #35e81d;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: #608540 0 2px 4px,#608540 0 7px 3px -3px,#066903 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+
+.btn3:focus {
+    box-shadow:  #066903 0 0 0 1.5px inset, #608540 0 2px 4px, #608540 0 7px 13px -3px,#608540 0 -3px 0 inset;
+  }
+  
+.btn3:hover {
+    box-shadow: #608540 0 4px 8px, #608540 0 7px 6px -3px, #066903 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+.btn3:active {
+    box-shadow: #608540 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+
+  /* toggle*/
+
+
+
+
+  .toggle * {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+
+  .toggle input[type="checkbox"] {
+    display: none;
+  }
+
+  .toggle label {
+    --size: 40px;
+    position: relative;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    margin: 0 auto;
+    border: whitesmoke;
+    background-color: #2a2a2b;
+    box-shadow:  -5px -5px 9px rgba(255,255,255,0.05),
+    5px 5px 9px rgba(0,0,0,0.5);;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: 0.2s ease transform, 0.2s ease background-color,
+      0.2s ease box-shadow;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .toggle label:before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: calc(var(--size) * .7);
+    height: calc(var(--size) * .7);
+    margin: 0 auto;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: 0.2s ease width, 0.2s ease height;
+  }
+
+  .toggle label:hover:before {
+    width: calc(var(--size) * .55);
+    height: calc(var(--size) * .55);
+    
+  }
+
+  .toggle label:active {
+    transform: scale(0.9);
+  }
+
+  .toggle .tick_mark {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    left: calc(var(--size) * -.05);
+    width: calc(var(--size) * .6);
+    height: calc(var(--size) * .6);
+    margin: 0 auto;
+    margin-left: calc(var(--size) * .14);
+    transform: rotateZ(-40deg);
+  }
+
+  .toggle .tick_mark:before,
+  .toggle .tick_mark:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border-radius: 2px;
+    opacity: 0;
+    transition: 0.2s ease transform, 0.2s ease opacity;
+  }
+
+  .toggle .tick_mark:before {
+    left: 0;
+    bottom: 0;
+    width: calc(var(--size) * .1);
+    height: calc(var(--size) * .3);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.23);
+    transform: translateY(calc(var(--size) * -.68));
+  }
+
+  .toggle .tick_mark:after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(var(--size) * .1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.23);
+    transform: translateX(calc(var(--size) * .78));
+  }
+
+  .toggle input[type="checkbox"]:checked + label {
+    background-color: #7f07d4;
+   
+  }
+
+  .toggle input[type="checkbox"]:checked + label:before {
+    width: 0;
+    height: 0;
+  }
+
+  .toggle input[type="checkbox"]:checked + label .tick_mark:before,
+  .toggle input[type="checkbox"]:checked + label .tick_mark:after {
+    transform: translate(0);
+    opacity: 1;
+  }

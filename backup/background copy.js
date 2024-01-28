@@ -29,7 +29,6 @@ function getDomain(url){
 function resetWebsiteTimeData(){
     chrome.storage.local.set({websiteTimeData: {}}, function(){
         websiteTimeData = {};
-        prevActiveTabs = undefined;
     });
 }
 
@@ -85,6 +84,19 @@ function queryActiveTabs(){
     return chrome.tabs.query({active: true});
 }
 
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
+    console.log(changeInfo.pendingUrl)
+    // Update websiteTimeData
+    if(changeInfo.status == "complete"){
+        setTimeout(() => {updateTimestamps().then(function(timeData){
+            chrome.tabs.sendMessage(tabId, {
+                header: "data",
+                tab: tab,
+                timeData: timeData
+            });
+        })}, 1000);
+    }
+});
 chrome.tabs.onActivated.addListener(function(activeInfo){
     // Update websiteTimeData
     updateTimestamps().then(function(timeData){
@@ -98,26 +110,15 @@ chrome.tabs.onActivated.addListener(function(activeInfo){
     });
 });
 
-chrome.runtime.onMessage.addListener(function(message, sender){
-    if(sender.tab && message.header == "data-request"){
-        updateTimestamps().then(function(timeData){
-                chrome.tabs.sendMessage(sender.tab.id, {
-                    header: "data",
-                    tab: sender.tab,
-                    timeData: timeData
-                });
-        });
-    }
-});
-
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
-    if(changeInfo.status == "complete"){
-        updateTimestamps().then(function(timeData){
-            chrome.tabs.sendMessage(tabId, {
-                header: "data",
-                tab: tab,
-                timeData: timeData
-            });
-        });
-    }
-});
+// chrome.runtime.onMessage.addListener(function(message, sender){
+//     if(sender.tab && message.header == "data-request"){
+//         updateTimestamps().then(function(timeData){
+//             console.log("sending:", timeData);
+//                 chrome.tabs.sendMessage(sender.id, {
+//                     header: "data",
+//                     tab: sender.tab,
+//                     timeData: timeData
+//                 });
+//         });
+//     }
+// })

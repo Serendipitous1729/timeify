@@ -9,5 +9,14 @@
     "background": {
       "service_worker": "background.js"
     },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScripts/siteTimer.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup/popup.html"
+    },
     "permissions": ["tabs", "activeTab", "scripting", "storage"]
 }

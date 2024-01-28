@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.extension-timer-container {
+    position: relative;
+}
+
+#draggable-elem {
+    height: 10%;
+    width: 20%;
+    background: #0f0f0f;
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: move;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: -5px -5px 9px rgba(255,255,255,0.05),
+    5px 5px 9px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+
+#draggable-elem > .time{
+    font-size: 200%;
+    vertical-align: middle;
+    user-select: none;
+}
+
+
+

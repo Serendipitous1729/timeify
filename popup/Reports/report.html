@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head alink="white" vlink="white" link="white">
+    <link rel="stylesheet" href="report.css">
+    <meta charset="UTF-8">
+    <a href="../popup.html">Back</a>
+    <br>
+    <img src="../../icon.png" alt="logo" align="left" hieght="40" width="40">
+    <h1>Reports</h1>
+</head>
+
+<body>
+    <br>
+    <div class="Window">
+            <details>
+                <summary>Window1</summary>
+                <div>
+            List:
+            
+   <br><br>
+   
+   <table id="myTable" width="300px" border="3px" bordercolor="white">
+      <thead>
+         <th> Site </th>
+         <th> Time% </th>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+   </table>
+
+</body>
+<script>
+   function addRow(name, time) {
+      let table = document.getElementById("tableBody");
+      let row = document.createElement("tr")
+      let c1 = document.createElement("td")
+      let c2 = document.createElement("td")
+      c1.innerText = name
+      c2.innerText = time
+      row.appendChild(c1);
+      row.appendChild(c2);
+      table.appendChild(row)
+   }
+   //Testing
+   addRow('Youtube','45')
+   
+</script>
