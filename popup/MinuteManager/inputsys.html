@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="inputsys.css">
     <meta charset="UTF-8">
-    <img src="logo.png" alt="logo" align="left" hieght="40" width="40">
+    <img src="../../icon.png" alt="logo" align="left" hieght="40" width="40">
     <h1>MinuteManager</h1>
 </head>
 <body>
@@ -23,7 +23,7 @@
         <input type="date", id="pe_date" name="pe_date"> <br><br>    
         <label for="pe_time">Enter time: </label>
         <input type="time", id="pe_time" name="pe_time"> <br><br>
-        <button onclick="getplan()">Enter</button><br><br>
+        <button id="planned-submit" onclick="getplan()">Enter</button><br><br>
     </div>
     <br><br>
 
@@ -33,7 +33,7 @@
         <input type="number" id="hrs" name="hrs" max="4", min="0">
         <label for="mins">mins:</label>
         <input type="number" id="mins" name="mins" max="59", min="0" step="15"><br><br>
-        <button onclick="gettime()">Enter</button>
+        <button id="free-submit" onclick="gettime()">Enter</button>
         <br><br>
     </div>
     <br><br>
@@ -49,11 +49,11 @@
         <label for="Priority">Enter Priority: </label>
         <input type="number", id="Priority" name="Priority" min="0" max="14">
         <br><br>
-        <button onclick="ask()" > Submit</button>
+        <button id="tasks-submit" onclick="ask()" > Submit</button>
         <br><br>
         </div>
         <br>
-        <button onclick="scheduleTasks()">Finish</button>
+        <button id="all-submit" onclick="scheduleTasks()">Finish</button>
         <br><br>
         <p id="list_display"></p>
         <script src="inputsys.js">

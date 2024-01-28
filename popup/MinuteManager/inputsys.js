@@ -38,17 +38,12 @@ function getplan(){
         
     }
 
-console.log(timetable);
 }
-console.log(timetable);
 function gettime(){    
     let hrs = parseInt(document.getElementById('hrs').value)
     let mins = parseInt(document.getElementById('mins').value);
     let free_time = (60*hrs) + mins;
-    console.log(free_time)
-    console.log('l', limit);
     let working_Time = limit - free_time;
-    console.log('q', working_Time)
 }
 
     function ask() {
@@ -63,7 +58,6 @@ function gettime(){
         hwDate.setFullYear(subYear, subMonth, subDay);
         var daysLeft = (hwDate - nowDate)/(24*60*60*1000);
         daysLeft = daysLeft.toFixed(0);
-        console.log(daysLeft);
         let priority = parseInt(document.getElementById("Priority").value);
         let name = document.getElementById("name").value;
         let task = [time, daysLeft, priority, name];
@@ -81,23 +75,17 @@ function gettime(){
             for (let i = 0; i < timetable[dayNumber].length; i++) {
                 inDay += timetable[dayNumber][i][0];
             }
-            console.log('i', inDay);
-            console.log('l', limit);
             let timeLeft = limit - inDay;
-            console.log(timeLeft);
             let tasksGiven = [];
             let notAssigned = [];
-            for (let i of taskList) {  
-                console.log(i[0]);           
+            for (let i of taskList) {        
                 if (i[0] <= timeLeft) {
-                    console.log(i);
                     timetable[dayNumber].push(i);
                     tasksGiven.push(i);
                     timeLeft -= i[0];
                 } else {
                     notAssigned.push([i]);
                 }}
-            console.log('l2', limit)
             
             
             
@@ -130,9 +118,7 @@ function gettime(){
             for (let task of outList[day]) {
                 if (task.length > 1) {
                     if (day > task[1]) {
-                        console.log('d:', day);
-                        console.log('t:', task[1])
-                        alert("Not possible");
+                        alert("Not possible. Try changing some values.");
                         return [[]];
                     } else {
                         return outList;
@@ -142,9 +128,7 @@ function gettime(){
 }
 }
 function scheduleTasks() {
-    console.log('w', working_Time)
     let entries = entryList;
-    console.log(timetable);
     let outList = final(entries, timetable, working_Time);for (let i = 0; i < outList.length; i++) {
         if (i === 0) {
             console.log("Today: ", outList[i]);
@@ -152,7 +136,20 @@ function scheduleTasks() {
             console.log("Day", i, ':', outList[i]);
         }
     }
+    alert("Press Ctrl+Shift+J");
 
     }
     
     
+document.getElementById("all-submit").addEventListener("click", function(){
+    scheduleTasks();
+});
+document.getElementById("tasks-submit").addEventListener("click", function(){
+    ask();
+});
+document.getElementById("free-submit").addEventListener("click", function(){
+    gettime();
+});
+document.getElementById("planned-submit").addEventListener("click", function(){
+    getplan();
+});
