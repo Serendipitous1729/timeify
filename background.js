@@ -121,3 +121,11 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
         });
     }
 });
+
+// Reset every day
+prevDay = (new Date()).getDate();
+setInterval(function(){
+    if((new Date()).getDate() != prevDay){
+        resetWebsiteTimeData();
+    }
+}, 60*1000);
